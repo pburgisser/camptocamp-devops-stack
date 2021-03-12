@@ -1,5 +1,8 @@
 ---
 argo-cd:
+  openshift:
+    enabled: true
+
   installCRDs: false
   global:
     image:

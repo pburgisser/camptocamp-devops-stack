@@ -32,17 +32,18 @@ resource "helm_release" "argocd" {
   namespace         = "argocd"
   dependency_update = true
   create_namespace  = true
-  timeout           = 10800
+  timeout           = 180
 
   values = [
-    yamlencode(yamldecode(file("${path.module}/../../argocd/argocd/values.yaml")).argo-cd),
     <<EOT
-    configs:
-      secret:
-        extra:
-          oidc.default.clientSecret: ${var.oidc.client_secret}
-          accounts.pipeline.tokens: '${local.argocd_accounts_pipeline_tokens}'
-    EOT
+openshift:
+  enabled: true
+redis:
+  securityContext: false
+server:
+  route:
+    enabled: true
+  EOT
   ]
 }
 
@@ -97,22 +98,22 @@ resource "helm_release" "app_of_apps" {
   ]
 }
 
-resource "null_resource" "wait_for_app_of_apps" {
-  depends_on = [
-    helm_release.app_of_apps
-  ]
+# resource "null_resource" "wait_for_app_of_apps" {
+#   depends_on = [
+#     helm_release.app_of_apps
+#   ]
 
-  provisioner "local-exec" {
-    command     = "while ! KUBECONFIG=<(echo \"$KUBECONFIG_CONTENT\") argocd app wait apps --sync --health --timeout 30; do echo Retry; done"
-    interpreter = ["/bin/bash", "-c"]
+#   provisioner "local-exec" {
+#     command     = "while ! KUBECONFIG=<(echo \"$KUBECONFIG_CONTENT\") argocd app wait apps --sync --health --timeout 30; do echo Retry; done"
+#     interpreter = ["/bin/bash", "-c"]
 
-    environment = {
-      ARGOCD_OPTS        = "--plaintext --port-forward --port-forward-namespace argocd"
-      KUBECONFIG_CONTENT = var.kubeconfig
-      ARGOCD_AUTH_TOKEN  = jwt_hashed_token.argocd.token
-    }
-  }
-}
+#     environment = {
+#       ARGOCD_OPTS        = "--plaintext --port-forward --port-forward-namespace argocd"
+#       KUBECONFIG_CONTENT = var.kubeconfig
+#       ARGOCD_AUTH_TOKEN  = jwt_hashed_token.argocd.token
+#     }
+#   }
+# }
 
 resource "random_password" "oauth2_cookie_secret" {
   length  = 16

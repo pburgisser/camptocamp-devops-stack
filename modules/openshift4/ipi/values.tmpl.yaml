@@ -1,0 +1,11 @@
+---
+traefik:
+  enabled: false
+argo-cd:
+  openshift:
+    enabled: true
+  redis:
+    securityContext: false
+  server:
+    route:
+      enabled: true

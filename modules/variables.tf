@@ -26,3 +26,13 @@ variable "extra_apps" {
   type        = list(any)
   default     = []
 }
+
+variable "base_domain" {
+  description = "The base domain used for Ingresses."
+  type        = string
+}
+
+variable "cluster_issuer" {
+  description = "Cluster Issuer"
+  type        = string
+}
