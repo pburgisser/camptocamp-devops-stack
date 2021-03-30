@@ -7,6 +7,8 @@
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GDBX9466LL"></script>
+    <script>function gtag(){dataLayer.push(arguments)};window.dataLayer=window.dataLayer||[];gtag('js',new Date());gtag('config','G-GDBX9466LL')</script>
     <script>var uiRootPath = '../../../_'</script>
     <link rel="icon" href="../../../_/img/favicon.png" type="image/x-icon">
   </head>
@@ -105,6 +107,78 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="authentication.html">Authentication</a>
   </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="terraform_modules.html">Terraform Modules</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="terraform_modules/argocd-helm.html">ArgoCD Helm</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="terraform_modules/aks/azure.html">Azure AKS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="terraform_modules/eks/aws.html">AWS EKS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="terraform_modules/k3s/docker.html">K3s Docker</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="terraform_modules/k3s/libvirt.html">K3s Libvirt</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="terraform_modules/openshift4/aws.html">OpenShift 4 on AWS</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#ROOT:references/applications.adoc">Applications</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="applications/apps.html">Umbrella App</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="applications/app-of-apps.html">App of Apps</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="applications/aad-pod-identity.html">AAD Pod Identity</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="applications/argocd.html">ArgoCD</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="applications/cert-manager.html">Cert Manager</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="applications/csi-secrets-store-provider-azure.html">CSI Secrets Store Provider Azure</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="applications/efs-provisioner.html">EFS Provisioner</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="applications/keycloak.html">Keycloak</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="applications/kube-prometheus-stack.html">Kube Prometheus Stack</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="applications/loki-stack.html">Loki Stack</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="applications/minio.html">Minio</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="applications/secrets-store-csi-driver.html">Secrets Store CSI Driver</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="applications/traefik.html">Traefik</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="applications/vault.html">Vault</a>
+  </li>
+</ul>
+  </li>
   <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="changelog.html">Changelog</a>
   </li>
@@ -183,6 +257,50 @@
 </aside>
 <article class="doc">
 <h1 class="page">Changelog</h1>
+<div class="sect1">
+<h2 id="_0_31_0_2021_03_29"><a class="anchor" href="#_0_31_0_2021_03_29"></a><a href="https://github.com/camptocamp/devops-stack/tree/v0.31.0">0.31.0</a> (2021-03-29)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://github.com/camptocamp/devops-stack/compare/v0.30.0&#8230;&#8203;v0.31.0">Full Changelog</a></p>
+</div>
+<div class="paragraph">
+<p><strong>New flavor</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add support for Openshift4 on AWS <a href="https://github.com/camptocamp/devops-stack/pull/547">#547</a> (<a href="https://github.com/pburgisser">pburgisser</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Fixed Bugs:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Fix passing Grafana admin password <a href="https://github.com/camptocamp/devops-stack/pull/558">#558</a> (<a href="https://github.com/mcanevet">mcanevet</a>)</p>
+</li>
+<li>
+<p>Fix passing ArgoCD server secretkey <a href="https://github.com/camptocamp/devops-stack/pull/559">#559</a> (<a href="https://github.com/mcanevet">mcanevet</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Documentations:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add Terraform module references <a href="https://github.com/camptocamp/devops-stack/pull/556">#556</a> (<a href="https://github.com/raphink">raphink</a>)</p>
+</li>
+<li>
+<p>app references <a href="https://github.com/camptocamp/devops-stack/pull/557">#557</a> (<a href="https://github.com/raphink">raphink</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_0_30_0_2021_03_25"><a class="anchor" href="#_0_30_0_2021_03_25"></a><a href="https://github.com/camptocamp/devops-stack/tree/v0.30.0">0.30.0</a> (2021-03-25)</h2>
 <div class="sectionbody">
