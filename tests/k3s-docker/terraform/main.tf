@@ -7,6 +7,8 @@ module "cluster" {
   repo_url        = var.repo_url
   target_revision = var.target_revision
 
+  base_domain     = "192-168-1-118.nip.io"
+
   extra_apps = [
     {
       metadata = {
