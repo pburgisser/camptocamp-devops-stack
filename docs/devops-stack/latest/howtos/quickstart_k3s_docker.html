@@ -22,12 +22,9 @@
         <span></span>
         <span></span>
       </button>
-    </div>
+    </div>    
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
-        <div class="navbar-item">
-          <input id="search-input" type="text" placeholder="Search docs">
-        </div>
         <a class="navbar-item" href="https://github.com/camptocamp/devops-stack"><i class="fa fa-github-alt"></i>&nbsp;GitHub</a>
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link" href="#">Products</a>
@@ -91,6 +88,18 @@
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="pipelines.html">Pipelines</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pipelines_gitlab.html">Create your GitLab Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="pipelines_github.html">Create your Github Pipeline</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="#ROOT:howtos/contributions.adoc">Contribution</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
@@ -110,6 +119,9 @@
     <button class="nav-item-toggle"></button>
     <span class="nav-text">References</span>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../references/architecture.html">Architecture</a>
+  </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../references/authentication.html">Authentication</a>
   </li>
@@ -273,10 +285,19 @@
 <p>Access to a functional Docker Engine,</p>
 </li>
 <li>
-<p>CGroupv2 disabled (K3s does not support it for now),</p>
+<p><span class="line-through">CGroupv2 disabled (K3s does not support it for now)</span></p>
 </li>
 <li>
 <p>Knowledge of <a href="https://terraform.io">Terraform</a> basics</p>
+</li>
+<li>
+<p>Minimal Terraform version: 0.14</p>
+</li>
+<li>
+<p><code>jq</code> binary</p>
+</li>
+<li>
+<p><a href="https://argoproj.github.io/argo-cd/cli_installation/">argocd</a> CLI</p>
 </li>
 </ul>
 </div>
@@ -293,7 +314,9 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-hcl hljs" data-lang="hcl">module "cluster" {
+<pre class="highlightjs highlight"><code class="language-hcl hljs" data-lang="hcl"># terraform/main.tf
+
+module "cluster" {
   source = "git::https://github.com/camptocamp/devops-stack.git//modules/k3s/docker?ref=master"
 
   cluster_name = "my-cluster"
@@ -306,7 +329,9 @@ You can specify the published ports of the K3S master and the base domain to use
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-hcl hljs" data-lang="hcl">module "cluster" {
+<pre class="highlightjs highlight"><code class="language-hcl hljs" data-lang="hcl"># terraform/main.tf
+
+module "cluster" {
   source = "git::https://github.com/camptocamp/devops-stack.git//modules/k3s/docker?ref=master"
 
   cluster_name = "my-cluster"
@@ -484,9 +509,6 @@ and login details in Keycloak.
   window.antora.pagePath = '/devops-stack/latest/howtos/quickstart_k3s_docker.html'
 </script>
 <script src="../../../_/js/site.js"></script>
-<script src="../../../_/js/vendor/lunr.js"></script>
-<script src="../../../_/js/vendor/search.js"></script>
-<script async src="../../../_/js/vendor/search-index.js"></script>
 <script async src="../../../_/js/vendor/terraform.js"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>
   </body>

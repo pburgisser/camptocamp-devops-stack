@@ -22,12 +22,9 @@
         <span></span>
         <span></span>
       </button>
-    </div>
+    </div>    
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
-        <div class="navbar-item">
-          <input id="search-input" type="text" placeholder="Search docs">
-        </div>
         <a class="navbar-item" href="https://github.com/camptocamp/devops-stack"><i class="fa fa-github-alt"></i>&nbsp;GitHub</a>
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link" href="#">Products</a>
@@ -91,6 +88,18 @@
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../howtos/pipelines.html">Pipelines</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../howtos/pipelines_gitlab.html">Create your GitLab Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../howtos/pipelines_github.html">Create your Github Pipeline</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="#ROOT:howtos/contributions.adoc">Contribution</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
@@ -110,6 +119,9 @@
     <button class="nav-item-toggle"></button>
     <span class="nav-text">References</span>
 <ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="architecture.html">Architecture</a>
+  </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="authentication.html">Authentication</a>
   </li>
@@ -263,6 +275,352 @@
 </aside>
 <article class="doc">
 <h1 class="page">Changelog</h1>
+<div class="sect1">
+<h2 id="_0_39_0_2021_07_05"><a class="anchor" href="#_0_39_0_2021_07_05"></a><a href="https://github.com/camptocamp/devops-stack/tree/v0.39.0">0.39.0</a> (2021-07-05)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://github.com/camptocamp/devops-stack/compare/v0.38.0&#8230;&#8203;v0.39.0">Full Changelog</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Implemented enhancements:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>feat: add support for tfmigrate in gitlab ci pipeline <a href="https://github.com/camptocamp/devops-stack/pull/677">#677</a> (<a href="https://github.com/mcanevet">mcanevet</a>)</p>
+</li>
+<li>
+<p>feat(aks): add kube_admin_config output <a href="https://github.com/camptocamp/devops-stack/pull/682">#682</a> (<a href="https://github.com/mcanevet">mcanevet</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Documentation:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>docs(pipelines): add howtos about pipeline creation with gitlab, github, terraform and tfmigrate <a href="https://github.com/camptocamp/devops-stack/pull/679">#679</a> (<a href="https://github.com/fsismondi">fsismondi</a>)</p>
+</li>
+<li>
+<p>doc(k3s): update k3s quickstart documentation <a href="https://github.com/camptocamp/devops-stack/pull/681">#681</a> (<a href="https://github.com/mcanevet">mcanevet</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_0_38_0_2021_06_22"><a class="anchor" href="#_0_38_0_2021_06_22"></a><a href="https://github.com/camptocamp/devops-stack/tree/v0.38.0">0.38.0</a> (2021-06-22)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://github.com/camptocamp/devops-stack/compare/v0.37.1&#8230;&#8203;v0.38.0">Full Changelog</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Breaking Changes:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>feat: change ArgoCD&#8217;s default policy from read-only to none <a href="https://github.com/camptocamp/devops-stack/pull/672">#672</a> (<a href="https://github.com/mcanevet">mcanevet</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Implemented enhancements:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>feat: allow to set AppProject&#8217;s status <a href="https://github.com/camptocamp/devops-stack/pull/673">#673</a> (<a href="https://github.com/mcanevet">mcanevet</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Fixed Bugs:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>fix: argocd secret dependency <a href="https://github.com/camptocamp/devops-stack/pull/667">#667</a> (<a href="https://github.com/modridi">modridi</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_0_37_1_2021_06_11"><a class="anchor" href="#_0_37_1_2021_06_11"></a><a href="https://github.com/camptocamp/devops-stack/tree/v0.37.1">0.37.1</a> (2021-06-11)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://github.com/camptocamp/devops-stack/compare/v0.37.0&#8230;&#8203;v0.37.1">Full Changelog</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Fixed Bugs:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>fix cluster-issuer deployment refactoring <a href="https://github.com/camptocamp/devops-stack/pull/669">#669</a> (<a href="https://github.com/mcanevet">mcanevet</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_0_37_0_2021_06_10"><a class="anchor" href="#_0_37_0_2021_06_10"></a><a href="https://github.com/camptocamp/devops-stack/tree/v0.37.0">0.37.0</a> (2021-06-10)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://github.com/camptocamp/devops-stack/compare/v0.36.0&#8230;&#8203;v0.37.0">Full Changelog</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Implemented enhancements:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>feat: add support to deploy ApplicationSets <a href="https://github.com/camptocamp/devops-stack/pull/659">#659</a> (<a href="https://github.com/mcanevet">mcanevet</a>)</p>
+</li>
+<li>
+<p>feat: manage EFS in aws/eks only <a href="https://github.com/camptocamp/devops-stack/pull/657">#657</a> (<a href="https://github.com/raphink">raphink</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Upgraded components:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>feat: upgrade Terraform to 1.0.0 <a href="https://github.com/camptocamp/devops-stack/pull/656">#656</a> (<a href="https://github.com/mcanevet">mcanevet</a>)</p>
+</li>
+<li>
+<p>feat(oauth2-proxy): upgrade to v7.1.3 <a href="https://github.com/camptocamp/devops-stack/pull/627">#627</a> (<a href="https://github.com/mcanevet">mcanevet</a>)</p>
+</li>
+<li>
+<p>feat(argocd): upgrade ArgoCD components <a href="https://github.com/camptocamp/devops-stack/pull/626">#626</a> (<a href="https://github.com/mcanevet">mcanevet</a>)</p>
+</li>
+<li>
+<p>feat: upgrade aad-pod-identity to v1.8.0 <a href="https://github.com/camptocamp/devops-stack/pull/624">#624</a> (<a href="https://github.com/mcanevet">mcanevet</a>)</p>
+</li>
+<li>
+<p>feat: upgrade secrets-store-csi-driver-provider-azure to v0.0.22 <a href="https://github.com/camptocamp/devops-stack/pull/623">#623</a> (<a href="https://github.com/mcanevet">mcanevet</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Fixed Bugs:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>feat(cert-manager): parameterize clusterissuers to allow overriding parameters <a href="https://github.com/camptocamp/devops-stack/pull/652">#652</a> (<a href="https://github.com/raphink">raphink</a>)</p>
+</li>
+<li>
+<p>feat(aks): upgrade azurerm provider to 2.62.1 <a href="https://github.com/camptocamp/devops-stack/pull/664">#664</a> (<a href="https://github.com/mcanevet">mcanevet</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Documentation:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>feat(docs): generate docs for Thanos chart <a href="https://github.com/camptocamp/devops-stack/pull/663">#663</a> (<a href="https://github.com/raphink">raphink</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_0_36_0_2021_06_08"><a class="anchor" href="#_0_36_0_2021_06_08"></a><a href="https://github.com/camptocamp/devops-stack/tree/v0.36.0">0.36.0</a> (2021-06-08)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://github.com/camptocamp/devops-stack/compare/v0.35.0&#8230;&#8203;v0.36.0">Full Changelog</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Implemented enhancements:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>feat(eks): add cluster-autoscaler <a href="https://github.com/camptocamp/devops-stack/pull/651">#651</a> (<a href="https://github.com/cryptobioz">cryptobioz</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_0_35_0_2021_06_07"><a class="anchor" href="#_0_35_0_2021_06_07"></a><a href="https://github.com/camptocamp/devops-stack/tree/v0.35.0">0.35.0</a> (2021-06-07)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://github.com/camptocamp/devops-stack/compare/v0.34.0&#8230;&#8203;v0.35.0">Full Changelog</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Continuous Integration:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>feat: add conventional commits check <a href="https://github.com/camptocamp/devops-stack/pull/648">#648</a> (<a href="https://github.com/mcanevet">mcanevet</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Documentation:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add architecture schema <a href="https://github.com/camptocamp/devops-stack/pull/647">#647</a> (<a href="https://github.com/raphink">raphink</a>)</p>
+</li>
+<li>
+<p>Add architecture page to navigation <a href="https://github.com/camptocamp/devops-stack/pull/649">#649</a> (<a href="https://github.com/raphink">raphink</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Implemented enhancements:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>feat: output clusterid. This is used for group management <a href="https://github.com/camptocamp/devops-stack/pull/650">#650</a> (<a href="https://github.com/JGodin-C2C">JGodin-C2C</a>)</p>
+</li>
+<li>
+<p>feat: allow to deploy extra AppProject objects <a href="https://github.com/camptocamp/devops-stack/pull/644">#644</a> (<a href="https://github.com/mcanevet">mcanevet</a>)</p>
+</li>
+<li>
+<p>feat(k3s): use minio as unique storage solution for Loki <a href="https://github.com/camptocamp/devops-stack/pull/653">#653</a> (<a href="https://github.com/mbornoz">mbornoz</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Upgraded components:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>feat: upgrade azurerm provider to 2.62.0 <a href="https://github.com/camptocamp/devops-stack/pull/654">#654</a> (<a href="https://github.com/modridi">modridi</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_0_34_0_2021_05_25"><a class="anchor" href="#_0_34_0_2021_05_25"></a><a href="https://github.com/camptocamp/devops-stack/tree/v0.34.0">0.34.0</a> (2021-05-25)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://github.com/camptocamp/devops-stack/compare/v0.33.4&#8230;&#8203;v0.34.0">Full Changelog</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Upgraded components:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>feat: upgrade azurerm provider to 2.60.0 <a href="https://github.com/camptocamp/devops-stack/pull/618">#618</a> (<a href="https://github.com/mcanevet">mcanevet</a>)</p>
+</li>
+<li>
+<p>Upgrade Terraform version to 0.15.4 <a href="https://github.com/camptocamp/devops-stack/pull/619">#619</a> (<a href="https://github.com/mcanevet">mcanevet</a>)</p>
+</li>
+<li>
+<p>feat(azuread): upgrade provider version 1.5.0 <a href="https://github.com/camptocamp/devops-stack/pull/634">#634</a> (<a href="https://github.com/mcanevet">mcanevet</a>)</p>
+</li>
+<li>
+<p>feat(k3s-docker): upgrade K3s to v1.20.7-k3s1 <a href="https://github.com/camptocamp/devops-stack/pull/625">#625</a> (<a href="https://github.com/mcanevet">mcanevet</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_0_33_4_2021_05_21"><a class="anchor" href="#_0_33_4_2021_05_21"></a><a href="https://github.com/camptocamp/devops-stack/tree/v0.33.4">0.33.4</a> (2021-05-21)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://github.com/camptocamp/devops-stack/compare/v0.33.3&#8230;&#8203;v0.33.4">Full Changelog</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Fixed Bugs:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>fix: wrong quoting <a href="https://github.com/camptocamp/devops-stack/pull/620">#620</a> (<a href="https://github.com/mcanevet">mcanevet</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_0_33_3_2021_05_19"><a class="anchor" href="#_0_33_3_2021_05_19"></a><a href="https://github.com/camptocamp/devops-stack/tree/v0.33.3">0.33.3</a> (2021-05-19)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://github.com/camptocamp/devops-stack/compare/v0.33.2&#8230;&#8203;v0.33.3">Full Changelog</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Fixed Bugs:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>fix: use random_password instead of random_string <a href="https://github.com/camptocamp/devops-stack/pull/612">#612</a> (<a href="https://github.com/mcanevet">mcanevet</a>)</p>
+</li>
+<li>
+<p>use quotes for variable strings in values template <a href="https://github.com/camptocamp/devops-stack/pull/613">#613</a> (<a href="https://github.com/cryptobioz">cryptobioz</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_0_33_2_2021_05_14"><a class="anchor" href="#_0_33_2_2021_05_14"></a><a href="https://github.com/camptocamp/devops-stack/tree/v0.33.2">0.33.2</a> (2021-05-14)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://github.com/camptocamp/devops-stack/compare/v0.33.1&#8230;&#8203;v0.33.2">Full Changelog</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Fixed Bugs:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>eks/aws: fix multiple worker groups support <a href="https://github.com/camptocamp/devops-stack/pull/607">#607</a> (<a href="https://github.com/cryptobioz">cryptobioz</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_0_33_1_2021_05_12"><a class="anchor" href="#_0_33_1_2021_05_12"></a><a href="https://github.com/camptocamp/devops-stack/tree/v0.33.1">0.33.1</a> (2021-05-12)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://github.com/camptocamp/devops-stack/compare/v0.33.0&#8230;&#8203;v0.33.1">Full Changelog</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Fixed Bugs:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use resource group in Gitlab CI pipeline <a href="https://github.com/camptocamp/devops-stack/pull/599">#599</a> (<a href="https://github.com/mcanevet">mcanevet</a>)</p>
+</li>
+<li>
+<p>Fix csi-secrets-store-provider-azure deployment <a href="https://github.com/camptocamp/devops-stack/pull/598">#598</a> (<a href="https://github.com/mcanevet">mcanevet</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Documentations:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Activate OCP quickstart link on website <a href="https://github.com/camptocamp/devops-stack/pull/597">#597</a> (<a href="https://github.com/raphink">raphink</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_0_33_0_2021_04_27"><a class="anchor" href="#_0_33_0_2021_04_27"></a><a href="https://github.com/camptocamp/devops-stack/tree/v0.33.0">0.33.0</a> (2021-04-27)</h2>
 <div class="sectionbody">
@@ -2358,9 +2716,6 @@ You should spawn a new cluster.</p>
   window.antora.pagePath = '/devops-stack/latest/references/changelog.html'
 </script>
 <script src="../../../_/js/site.js"></script>
-<script src="../../../_/js/vendor/lunr.js"></script>
-<script src="../../../_/js/vendor/search.js"></script>
-<script async src="../../../_/js/vendor/search-index.js"></script>
 <script async src="../../../_/js/vendor/terraform.js"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>
   </body>

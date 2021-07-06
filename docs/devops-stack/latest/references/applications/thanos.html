@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>secrets-store-csi-driver :: DevOps Stack</title>
+    <title>thanos :: DevOps Stack</title>
     <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../../../../_/css/site.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -186,7 +186,7 @@
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="minio.html">Minio</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="3">
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="secrets-store-csi-driver.html">Secrets Store CSI Driver</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -263,35 +263,25 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../../index.html">DevOps Stack</a></li>
-    <li>References</li>
-    <li><a href="#ROOT:references/applications.adoc">Applications</a></li>
-    <li><a href="secrets-store-csi-driver.html">Secrets Store CSI Driver</a></li>
+    <li><a href="thanos.html">thanos</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/pburgisser/devops-stack/edit/master/docs/modules/ROOT/pages/references/applications/secrets-store-csi-driver.adoc"><i class="fa fa-github-alt"></i>&nbsp;Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/pburgisser/devops-stack/edit/master/docs/modules/ROOT/pages/references/applications/thanos.adoc"><i class="fa fa-github-alt"></i>&nbsp;Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">secrets-store-csi-driver</h1>
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>This chart installs a driver enabling volume mounts for Secrets Store
-access.</p>
-</div>
-</div>
-</div>
+<h1 class="page">thanos</h1>
 <div class="sect1">
 <h2 id="_requirements"><a class="anchor" href="#_requirements"></a>Requirements</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 45%;">
-<col style="width: 22%;">
-<col style="width: 33%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
 </colgroup>
 <thead>
 <tr>
@@ -302,9 +292,38 @@ access.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://raw.githubusercontent.com/kubernetes-sigs/secrets-store-csi-driver/master/charts" class="bare">https://raw.githubusercontent.com/kubernetes-sigs/secrets-store-csi-driver/master/charts</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">secrets-store-csi-driver</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0.0.16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://charts.bitnami.com/bitnami" class="bare">https://charts.bitnami.com/bitnami</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">thanos</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.14.0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_values"><a class="anchor" href="#_values"></a>Values</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Key</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Default</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">thanos</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>{}</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
 </table>
@@ -320,7 +339,7 @@ access.</p>
 <script>
   window.antora = window.antora || {}
   window.antora.basePath = '../../../..'
-  window.antora.pagePath = '/devops-stack/latest/references/applications/secrets-store-csi-driver.html'
+  window.antora.pagePath = '/devops-stack/latest/references/applications/thanos.html'
 </script>
 <script src="../../../../_/js/site.js"></script>
 <script async src="../../../../_/js/vendor/terraform.js"></script>
